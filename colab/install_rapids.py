@@ -29,10 +29,10 @@ for line in io.TextIOWrapper(output.stdout, encoding="utf-8"):
 # Install RAPIDS
 pkg = "rapids"
 if(sys.argv[1] == "nightly"):
-  release =  ["rapidsai-nightly", "22.02"]
+  release =  ["rapidsai-nightly", "22.06a"]
   print("Installing RAPIDS Nightly "+release[1])
 else:
-  release = ["rapidsai", "21.12"]
+  release = ["rapidsai", "22.04"]
   print("Installing RAPIDS Stable "+release[1])
 
 pkg = "rapids"
