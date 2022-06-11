@@ -38,7 +38,7 @@ else:
 pkg = "rapids"
 print("Starting the RAPIDS install on Colab.  This will take about 15 minutes.")
 
-output = subprocess.Popen(["conda install -y --prefix /usr/local -c "+release[0]+" -c nvidia -c conda-forge python=3.8 cudatoolkit=11.2 "+pkg+"="+release[1]+" llvmlite gcsfs openssl dask-sql"], shell=True, stderr=subprocess.STDOUT, 
+output = subprocess.Popen(["conda install -y --prefix /usr/local -c "+release[0]+" -c nvidia -c conda-forge python=3.9 cudatoolkit=11.0 "+pkg+"="+release[1]+" llvmlite gcsfs openssl dask-sql"], shell=True, stderr=subprocess.STDOUT, 
     stdout=subprocess.PIPE)
 for line in io.TextIOWrapper(output.stdout, encoding="utf-8"):
   if(line == ""):
